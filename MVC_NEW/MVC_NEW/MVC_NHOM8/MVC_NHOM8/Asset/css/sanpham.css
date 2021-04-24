@@ -1,0 +1,97 @@
+﻿/*#thân trang*/
+#trangphai {
+    width: 710px;
+    float: left;
+    height: 100%;
+    padding-left: 5px
+}
+
+.sanpham {
+}
+
+#sanphamnoibat {
+    overflow: hidden
+}
+
+.title-line {
+    text-align: center;
+    position: relative;
+    display: block;
+    margin-top: 28px
+}
+
+    .title-line > a {
+        text-decoration: none
+    }
+
+    .title-line .ten {
+        font: bold 18px SFUEurostileCond;
+        display: inline-block;
+        background: url(images/nenbody.gif);
+        padding: 0px 17px;
+        position: relative;
+        color: black;
+        z-index: 1
+    }
+
+    .title-line .xemchitiet {
+        font: normal 12px/40px 'Arial';
+        color: black;
+        float: right;
+        margin-top: 1px;
+    }
+
+    .title-line::before {
+        display: table;
+        content: "";
+        border-top: 1px solid black;
+        width: 100%;
+        position: absolute;
+        top: 8px;
+        border-bottom: 1px solid black;
+        padding-top: 1px;
+    }
+
+.sp_noibat {
+    margin-top: 25px;
+    overflow: hidden;
+    background: white
+}
+
+.item {
+    float: left;
+    text-align: center;
+    border: 1px solid black;
+    margin-right: 7px
+}
+
+    .item:last-child {
+        margin-right: 0px
+    }
+
+    .item img {
+        width: 230px;
+        height: 225px
+    }
+
+.title-sp {
+    display: block;
+    font: bold 18px SFUEurostileCond;
+    color: black;
+    padding: 8px 0px 8px 0px;
+    text-decoration: none
+}
+
+.desc {
+    font: normal 15px SFUEurostileCond;
+    color: white;
+    padding-bottom: 5px
+}
+
+#sanphammoive {
+    overflow: hidden
+}
+
+#sanphambanchay {
+    overflow: hidden
+}

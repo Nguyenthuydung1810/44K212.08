@@ -1,0 +1,91 @@
+﻿
+@{
+    ViewBag.Title = "_MainLayout";
+}
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>VẬT LIỆU XÂY DỰNG PHÚ DŨNG</title>
+
+    <link href="~/Asset/css/trangchu.css" rel="stylesheet" />
+</head>
+<body>
+
+    <!--đầu trang-->
+    <div id="dautrang">
+        <div class="contener">
+            <div id="logo">
+                <div id="logochu">
+                    <div id="anh1"></div>
+                </div>
+                <div id="logoanh">
+                    <div id="anh2">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--menu đầu trang-->
+    <div id="menudautrang">
+        <div class="contener">
+            <div id="menutrai">
+                <ul class="menungang">
+                    <li class="menu1"> @Html.ActionLink("TRANG CHỦ", "Index", "HOME")</li>
+                    <li class="menu1"> @Html.ActionLink("GIỚI THIỆU", "Index", "GIOITHIEU")</li>
+                    <li class="menu1"> @Html.ActionLink("SẢN PHẨM", "Index", "SANPHAM")</li>
+                    <li class="menu1"> @Html.ActionLink("CHÍNH SÁCH", "Index", "CHINHSACH")</li>
+                    <li class="menu1"> @Html.ActionLink("GIỎ HÀNG CỦA BẠN", "Index", "GIOHANG")</li>
+                </ul>
+            </div>
+            <div id="dangnhap">
+                <ul>
+                    <li class="dangnhap1">/@Html.ActionLink("Đăng kí", "Index", "DANGKI")</li>
+                    <li class="dangnhap2">@Html.ActionLink("Đăng nhập", "Index", "DANGNHAP")</li>
+                   
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--thanh tìm kiếm + giỏ hàng-->
+    <div id="timkiem">
+        <div class="contener">
+            <div id="timkiem">
+                <div class="timkiemtrai">
+                    <div class="timkiemanh"></div>
+                </div>
+                <div class="timkiemphai">
+                    <div class="giohang">
+                        <div id="cart"></div>
+                    </div>
+                    <div class="hotline">
+                        <div class="label">HOTLINE</div>
+                        <div class="number">096.3290.731 - 090.2234.481</div>
+                    </div>
+                    <div class="otimkiem">
+                        <div class="search">
+                            <form onsubmit="return checksearchForm();" id="searchForm" name="searchForm" method="post" action="">
+                                <input type="text" class="key" placeholder="Từ khóa tìm kiếm" value="" name="pr_name" id="keysearch">
+                                <input type="submit" value="Tìm kiếm" class="submit">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @RenderBody()
+    <!--chân trang-->
+    <div id="footer">
+        <div class="contener">
+          
+                <div class="col-md-6">
+                    Coppyright © 2021 - All rights reserved. Created by <a href="https://www.facebook.com/yennhi24.hi/" rel="nofollow" target="_blank">NHÓM 8</a>
+            
+            </div>
+        </div>
+    </div>
+</body>
+</html>

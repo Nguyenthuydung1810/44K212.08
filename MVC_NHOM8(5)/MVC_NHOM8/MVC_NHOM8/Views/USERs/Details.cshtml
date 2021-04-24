@@ -1,0 +1,91 @@
+﻿@model MVC_NHOM8.Models.USER
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/SanPhams/Index.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>USER</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.QuyenDangNhaps.TenQuyenDN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QuyenDangNhaps.TenQuyenDN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TenDangNhap)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenDangNhap)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MatKhau)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MatKhau)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmailDK)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmailDK)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DiaChiDK)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiaChiDK)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TenDayDu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenDayDu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cauhoibaomat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cauhoibaomat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NgaySinh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgaySinh)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GioiTinh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GioiTinh)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.UserID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

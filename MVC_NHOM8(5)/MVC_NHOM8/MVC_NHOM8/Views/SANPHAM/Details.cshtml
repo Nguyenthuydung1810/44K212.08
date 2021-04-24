@@ -1,0 +1,290 @@
+﻿
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+
+    <link href="~/Asset/css/sanpham.css" rel="stylesheet" />
+</head>
+<body>
+    <!--thân trang-->
+    <div id="thantrang">
+        <div class="contener">
+            <div id="trangtrai">
+                <div id="danhmuc">
+                    <div class="daumuc"><a>DANH MỤC SẢN PHẨM</a></div>
+                    <div class="ditmuc">
+                        <ul>
+                            <li><a href="#" title="GẠCH">GẠCH</a></li>
+                            <li><a href="#" title="THIẾT BỊ NGÀNH NƯỚC">THIẾT BỊ NGÀNH NƯỚC</a></li>
+                            <li><a href="#" title="ĐỒ ĐIỆN">ĐỒ ĐIỆN</a></li>
+                            <li><a href="#" title="XI MĂNG">XI MĂNG</a></li>
+                            <li><a href="#" title="CÁT">CÁT</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="hotro">
+                    <div id="pichotro">
+                        <div class="logohotro">
+                            <img src="../css/images/akmasa.png" title="pichtro" />
+                        </div>
+                        <h3>Hỗ trợ trực tuyến</h3>
+                    </div>
+                    <div class="support">
+                        <div class="text-center">
+                            <p>
+                                <span class="supp-name">PHÚ DŨNG</span>
+                                <br />
+                                <span class="phone">0905957700</span>
+                            </p>
+                            <a href="skype:?chat" class="skype">
+                                <img src="../css/images/skype-icon.png" />
+                            </a>
+                            <a href="ymsgr:sendim?pinkypinky_vn" class="yahoo">
+                                <img src="../css/images/yahoo-icon.png" />
+                            </a>
+                        </div>
+                        <div class="text-center">
+                            <p>
+                                <span class="supp-name">Số hotline</span>
+                                <br />
+                                <span class="phone">0905532254</span>
+                            </p>
+                        </div>
+                        <div class="text-center">
+                            <p>
+                                <span class="supp-name">Thời gian làm việc</span>
+                                <br />
+                                <span class="phone">24/24</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="thanhtoan">
+                    <div class="title-thanhtoan">
+                        <a>THÔNG TIN GIAO DỊCH</a>
+                    </div>
+                    <div class="thongtinnganhang">
+                        <div class="nganhang">
+                            <img src="../css/images/nganhang/vietcombank.png" />
+                            <p>
+                                <strong>Ngân hàng Vietcombank</strong>
+                                <br>
+                                Số TK: 0011 0031 68537
+                                <br>
+                                Chủ TK: YẾN NHI
+                                <br>
+                                Chi nhánh Hội sở - Hà Nội
+                            </p>
+                        </div>
+                        <div class="nganhang">
+                            <img src="../css/images/nganhang/agribank.png" />
+                            <p>
+                                <strong>Ngân hàng Agribank</strong>
+                                <br>
+                                Số TK: 0011 0031 68537
+                                <br>
+                                Chủ TK: THÙY DUNG
+                                <br>
+                                Chi nhánh Đà Nẵng
+                            </p>
+                        </div>
+                        <div class="nganhang">
+                            <img src="../css/images/nganhang/vietinbank.png" />
+                            <p>
+                                <strong>Ngân hàng Vietincombank</strong>
+                                <br>
+                                Số TK: 0011 0031 68537
+                                <br>
+                                Chủ TK: THÀNH LONG
+                                <br>
+                                Chi nhánh Hội sở - Hà Nội
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="thongketruycap">
+                    <div class="title-thongke">
+                        <a>THỐNG KÊ TRUY CẬP</a>
+                    </div>
+                    <div class="so-thongke">
+                        <p>Đang online: 100000</p>
+                        <p>Lượt truy cập: 1000500</p>
+                    </div>
+                </div>
+            </div>
+            <div id="trangphai">
+                <div class="chitietsp">
+                    <div 
+                         class="baosp"> <a href ="@Url.Action("Details",new {id=1})"><img alt="Áo nữ" class="imgsp" src="../pic/anhsp/ao-nu.jpg" /></a>
+                    <div>
+                    <div class="buttons">
+                        <a class="btn cart" href="@Url.Action("Index","GIOHANG")"><span class="glyphicon glyphicon-shopping-cart"></span></a>
+                        <a class="btn wishlist" href="#"><span class="glyphicon glyphicon-heart"></span></a>
+                        <a class="btn compare" href="#"><span class="glyphicon glyphicon-transfer"></span></a>
+                    </div>
+                    <div class="baochitiet">
+                        <div class="product-title">
+                            <h1>Cát</h1>
+
+                            <span id="pro_sku">MSP: SP0001H</span>
+
+                        </div>
+                        <div class="product-price">
+                            <span>100,000</span>
+                        </div>
+                        <div class="thongso">
+                            <div class="DVT">
+                                <label>Kích thước</label>
+                                <select class="select-site">
+                                    <option value="Cái">XL</option>
+                                    <option value="Kg">L</option>
+                                </select>
+                            </div>
+                            <div class="soluong">
+                                <label>Số lượng</label>
+                                <input id="quantity" type="number" name="quantity" min="1" value="1" class="tc item-quantity">
+                            </div>
+
+                            <div class="chatlieu">
+                                <label>Chất liệu</label>
+                                <span>Sắt</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="giohangsp">
+                                <button id="add-to-cart" class="btn-detail btn-color-add" name="add">Thêm vào giỏ</button>
+                            </div>
+                            <div class="muangay">
+                                <button id="buy-now" class="btn-detail btn-color-buy">Mua ngay</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sanphamlienquan">
+                    <div id="sanphamnoibat">
+                        <div class="title-line">
+                            <a class="groupname" href="#">
+                                <span class="ten">SẢN PHẨM LIÊN QUAN</span>
+                                <span class="xemchitiet">Xem tất cả [+]</span>
+                            </a>
+                        </div>
+                        <div class="sp_noibat">
+                            <div class="item">
+                                <a href="#" title="yếm bò">
+                                    <img src="../js/full-width-slider.slider/img/sanpham/ao2.jpg" alt="yếm bò" />
+                                </a>
+                                <a class="title-sp" href="#" title="yếm bò">
+                                    Yếm bò sooc
+                                </a>
+                                <div class="desc">
+                                    yếm sooc bò nữ
+                                </div>
+                            </div>
+                            <div class="item">
+                                <a href="#" title="yếm bò">
+                                    <img src="../js/full-width-slider.slider/img/sanpham/ao2.jpg" alt="yếm bò" />
+                                </a>
+                                <a class="title-sp" href="#" title="yếm bò">
+                                    Yếm bò sooc
+                                </a>
+                                <div class="desc">
+                                    yếm sooc bò nữ
+                                </div>
+                            </div>
+                            <div class="item">
+                                <a href="#" title="yếm bò">
+                                    <img src="../js/full-width-slider.slider/img/sanpham/ao2.jpg" alt="yếm bò" />
+                                </a>
+                                <a class="title-sp" href="#" title="yếm bò">
+                                    Yếm bò sooc
+                                </a>
+                                <div class="desc">
+                                    yếm sooc bò nữ
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sp_noibat">
+                            <div class="item">
+                                <a href="#" title="yếm bò">
+                                    <img src="../js/full-width-slider.slider/img/sanpham/ao2.jpg" alt="yếm bò" />
+                                </a>
+                                <a class="title-sp" href="#" title="yếm bò">
+                                    Yếm bò sooc
+                                </a>
+                                <div class="desc">
+                                    yếm sooc bò nữ
+                                </div>
+                            </div>
+                            <div class="item">
+                                <a href="#" title="yếm bò">
+                                    <img src="../js/full-width-slider.slider/img/sanpham/ao2.jpg" alt="yếm bò" />
+                                </a>
+                                <a class="title-sp" href="#" title="yếm bò">
+                                    Yếm bò sooc
+                                </a>
+                                <div class="desc">
+                                    yếm sooc bò nữ
+                                </div>
+                            </div>
+                            <div class="item">
+                                <a href="#" title="yếm bò">
+                                    <img src="../js/full-width-slider.slider/img/sanpham/ao2.jpg" alt="yếm bò" />
+                                </a>
+                                <a class="title-sp" href="#" title="yếm bò">
+                                    Yếm bò sooc
+                                </a>
+                                <div class="desc">
+                                    yếm sooc bò nữ
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sp_noibat">
+                            <div class="item">
+                                <a href="#" title="yếm bò">
+                                    <img src="../js/full-width-slider.slider/img/sanpham/ao2.jpg" alt="yếm bò" />
+                                </a>
+                                <a class="title-sp" href="#" title="yếm bò">
+                                    Yếm bò sooc
+                                </a>
+                                <div class="desc">
+                                    yếm sooc bò nữ
+                                </div>
+                            </div>
+                            <div class="item">
+                                <a href="#" title="yếm bò">
+                                    <img src="../js/full-width-slider.slider/img/sanpham/ao2.jpg" alt="yếm bò" />
+                                </a>
+                                <a class="title-sp" href="#" title="yếm bò">
+                                    Yếm bò sooc
+                                </a>
+                                <div class="desc">
+                                    yếm sooc bò nữ
+                                </div>
+                            </div>
+                            <div class="item">
+                                <a href="#" title="yếm bò">
+                                    <img src="../js/full-width-slider.slider/img/sanpham/ao2.jpg" alt="yếm bò" />
+                                </a>
+                                <a class="title-sp" href="#" title="yếm bò">
+                                    Yếm bò sooc
+                                </a>
+                                <div class="desc">
+                                    yếm sooc bò nữ
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            </div>
+        </div>
+</body>
+</html>
+

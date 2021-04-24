@@ -1,0 +1,27 @@
+﻿@model MVC_NHOM8.Models.QuyenDangNhap
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/SanPhams/Index.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>QuyenDangNhap</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TenQuyenDN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenQuyenDN)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.QuyenDNID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

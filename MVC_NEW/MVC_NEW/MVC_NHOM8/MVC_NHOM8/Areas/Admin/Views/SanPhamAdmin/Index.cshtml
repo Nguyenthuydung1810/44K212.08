@@ -1,0 +1,86 @@
+﻿@model IEnumerable<NHOM8.SanPham>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_MainLayoutAdmin.cshtml";
+}
+
+<style>
+    table {
+        border-collapse: collapse;
+        width: 50%;
+        margin: auto
+    }
+
+    th, td {
+        text-align: center;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #5d5e63;
+    }
+
+    th {
+        background-color: #2a9fd6;
+        color: white;
+    }
+</style>
+<h2>Quản Lý Sản Phẩm</h2>
+<table>
+    <tr>
+        <th>Mã sản phẩm</th>
+        <th>Tên sản phẩm</th>
+        <th>Ảnh sản phẩm</th>
+        <th>Số lượng sản phẩm</th>
+        <th>Giá sản phẩm</th>
+        <th>Mô tả sản phẩm</th>
+        <th>ĐVT</th>
+        <th>Danh mục ID</th>
+        <th colspan="2">
+            <a href="@Url.Action("Create","SanPhamAdmin")"><img src="~/Asset/images/AddNSX.png" /></a>
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.SanPhamID</td>
+            <td>@item.TenSP</td>
+            <td>@item.AnhSP</td>
+            <td>@item.SoLuongSP</td>
+            <td>@item.GiaSP</td>
+            <td>@item.MotaSP</td>
+            <td>@item.DVT</td>
+            <td>@item.DanhMucID</td>
+            <td><a href="@Url.Action("Edit","SanPhamAdmin",new { id = @item.SanPhamID})"> <img src="~/Asset/images/edit.png" /></a> </td>
+            <td><a href="@Url.Action("XoaTamThoi","SanPhamAdmin",new { id = @item.SanPhamID})"> <img src="~/Asset/images/Delete.png" /></a> </td>
+        </tr>
+    }
+</table>
+<!-- Modal -->
+<div class="modal fade" id="imagesManange" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Quản Lý Ảnh</h4>
+            </div>
+            <div class="modal-body">
+                <div id="imageList">
+
+                </div>
+                <div class="clear"></div>
+                <input type="button" id="btnChooImages" class="btn btn-primary" value="Chọn ảnh" />
+                <input type="hidden" id="hidProductID" value="0" />
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" id="btnSaveImages">Save</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
